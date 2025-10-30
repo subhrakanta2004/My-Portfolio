@@ -4,16 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Subhrakanta — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --glass: rgba(255,255,255,0.06); }
-    html,body{ font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; }
   </style>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100">
+<body class="bg-gray-900 text-white">
+
   <!-- NAV -->
   <header class="max-w-6xl mx-auto p-6">
     <nav class="flex items-center justify-between">
@@ -22,7 +19,6 @@
         <a href="#about" class="hover:text-indigo-300">About</a>
         <a href="#projects" class="hover:text-indigo-300">Projects</a>
         <a href="#contact" class="hover:text-indigo-300">Contact</a>
-        <a href="#" class="px-4 py-2 bg-indigo-600/90 rounded-lg text-sm font-semibold hover:bg-indigo-500">Resume</a>
       </div>
       <button id="menuBtn" class="md:hidden p-2 rounded-md bg-white/5">
         <svg id="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -33,7 +29,6 @@
         </svg>
       </button>
     </nav>
-    <!-- mobile menu -->
     <div id="mobileMenu" class="mt-4 md:hidden hidden">
       <a href="#about" class="block py-2">About</a>
       <a href="#projects" class="block py-2">Projects</a>
@@ -41,25 +36,15 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- MAIN -->
   <main class="max-w-6xl mx-auto px-6">
+    <!-- HERO -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
       <div class="md:col-span-2">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I’m <span class="text-indigo-400">Subhrakanta</span><br class="hidden md:block"> — a Frontend Developer</h1>
-        <p class="mt-4 text-gray-300 max-w-xl">I build clean, accessible, and responsive websites using modern tools. I love working with HTML, CSS, JavaScript, and Tailwind — and turning ideas into polished digital experiences.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="#projects" class="px-5 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-500">See my work</a>
-          <a href="#contact" class="px-5 py-3 border border-white/10 rounded-lg hover:bg-white/5">Contact me</a>
-        </div>
-
-        <div class="mt-8 grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-sm">
-          <div class="p-3 bg-white/3 rounded-lg text-center">HTML</div>
-          <div class="p-3 bg-white/3 rounded-lg text-center">CSS</div>
-          <div class="p-3 bg-white/3 rounded-lg text-center">JavaScript</div>
-          <div class="p-3 bg-white/3 rounded-lg text-center">Tailwind</div>
-          <div class="p-3 bg-white/3 rounded-lg text-center">React</div>
-          <div class="p-3 bg-white/3 rounded-lg text-center">Git</div>
-        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Hi, I’m <span class="text-indigo-400">Subhrakanta</span> — a Frontend Developer
+        </h1>
+        <p class="mt-4 text-gray-300 max-w-xl">I build clean, accessible, and responsive websites using modern tools.</p>
       </div>
 
       <div class="order-first md:order-last flex justify-center md:justify-end">
@@ -72,63 +57,23 @@
     <!-- ABOUT -->
     <section id="about" class="mt-16 bg-white/3 p-6 rounded-2xl shadow-inner">
       <h2 class="text-2xl font-bold">About me</h2>
-      <p class="mt-3 text-gray-200 max-w-3xl">I’m a passionate frontend developer focused on creating delightful and accessible interfaces. I enjoy translating complex problems into simple, beautiful designs and writing maintainable code.</p>
-
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-4 bg-white/5 rounded-lg">
-          <h3 class="font-semibold">Experience</h3>
-          <p class="mt-2 text-sm text-gray-300">2+ years building responsive websites and web apps.</p>
-        </div>
-        <div class="p-4 bg-white/5 rounded-lg">
-          <h3 class="font-semibold">Education</h3>
-          <p class="mt-2 text-sm text-gray-300">B.Tech in computer Science branch ,Gandhi Institute For Technology</p>
-        </div>
-        <div class="p-4 bg-white/5 rounded-lg">
-          <h3 class="font-semibold">Open to</h3>
-          <p class="mt-2 text-sm text-gray-300">Freelance projects, internships, and full-time roles</p>
-        </div>
-      </div>
+      <p class="mt-3 text-gray-200 max-w-3xl">I’m a frontend developer focused on creating delightful and accessible interfaces.</p>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="mt-12">
       <div class="flex items-center justify-between">
         <h2 class="text-2xl font-bold">Projects</h2>
-        <a href="#" class="text-sm opacity-80">View all →</a>
       </div>
 
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <article class="p-4 bg-white/4 rounded-xl hover:scale-[1.01] transition-transform">
-          <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1523540939396-0c0f9d8c1a3d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project" />
+        <article class="p-4 bg-white/4 rounded-xl">
           <h3 class="mt-3 font-semibold">Project One</h3>
-          <p class="text-sm mt-2 text-gray-300">A responsive landing page built with Tailwind CSS and vanilla JS.</p>
-          <div class="mt-3 flex gap-2 text-xs">
-            <span class="px-2 py-1 bg-white/3 rounded">HTML</span>
-            <span class="px-2 py-1 bg-white/3 rounded">Tailwind</span>
-          </div>
+          <p class="text-sm mt-2 text-gray-300">Landing page with Tailwind.</p>
         </article>
-
-        <!-- Card 2 -->
-        <article class="p-4 bg-white/4 rounded-xl hover:scale-[1.01] transition-transform">
-          <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project" />
+        <article class="p-4 bg-white/4 rounded-xl">
           <h3 class="mt-3 font-semibold">Project Two</h3>
-          <p class="text-sm mt-2 text-gray-300">A small SPA using React and localStorage to manage state.</p>
-          <div class="mt-3 flex gap-2 text-xs">
-            <span class="px-2 py-1 bg-white/3 rounded">React</span>
-            <span class="px-2 py-1 bg-white/3 rounded">JavaScript</span>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="p-4 bg-white/4 rounded-xl hover:scale-[1.01] transition-transform">
-          <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1508385082359-f38b3a1b0d8d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project" />
-          <h3 class="mt-3 font-semibold">Project Three</h3>
-          <p class="text-sm mt-2 text-gray-300">An interactive quiz app built with clean UI and animations.</p>
-          <div class="mt-3 flex gap-2 text-xs">
-            <span class="px-2 py-1 bg-white/3 rounded">JavaScript</span>
-            <span class="px-2 py-1 bg-white/3 rounded">CSS</span>
-          </div>
+          <p class="text-sm mt-2 text-gray-300">Small React SPA.</p>
         </article>
       </div>
     </section>
@@ -136,44 +81,80 @@
     <!-- CONTACT -->
     <section id="contact" class="mt-12 bg-white/3 p-6 rounded-2xl">
       <h2 class="text-2xl font-bold">Get in touch</h2>
-      <p class="mt-2 text-gray-300">Interested in working together? Send a message and I’ll reply soon.</p>
+      <p class="mt-2 text-gray-300">Interested in working together? Send a message below.</p>
 
-      <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Your name" class="p-3 rounded bg-white/5 border border-white/5 focus:outline-none" />
-        <input type="email" placeholder="Your email" class="p-3 rounded bg-white/5 border border-white/5 focus:outline-none" />
-        <textarea placeholder="Message" class="md:col-span-2 p-3 rounded bg-white/5 border border-white/5 focus:outline-none h-32"></textarea>
+      <!-- ======= CONTACT FORM (Web3Forms) ======= -->
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- REPLACE this value with your real Web3Forms Access Key (keep quotes) -->
+        <input type="hidden" name="access_key" value="ca1f30ef-ca84-4c41-b016-2a0e73be079c">
+
+        <input type="text" name="name" placeholder="Your name" class="p-3 rounded bg-white/5 border border-white/5 focus:outline-none" required />
+        <input type="email" name="email" placeholder="Your email" class="p-3 rounded bg-white/5 border border-white/5 focus:outline-none" required />
+        <textarea name="message" placeholder="Message" class="md:col-span-2 p-3 rounded bg-white/5 border border-white/5 focus:outline-none h-32" required></textarea>
+
         <button type="submit" class="md:col-span-2 px-5 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-500">Send message</button>
       </form>
 
-      <div class="mt-6 text-sm text-gray-300">Or email me at <a href="mailto:you@example.com">Subhrakantakhandai342@gmail.com & Call me at 8260994314</a></div>
+      <p id="result" class="mt-4 text-center text-sm text-green-400 hidden">✅ Message Sent Successfully!</p>
+      <p id="error" class="mt-4 text-center text-sm text-red-400 hidden">❌ Something went wrong — try again.</p>
+
+      <div class="mt-6 text-sm text-gray-300">
+        Or email me at <a href="mailto:subhrakantakhandai342@gmail.com" class="underline">subhrakantakhandai342@gmail.com</a>
+      </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="mt-12 py-8 text-center text-sm text-gray-400">© <span id="year"></span> Subhrakanta — Built with ❤️ and Tailwind CSS</footer>
+    <footer class="mt-12 py-8 text-center text-sm text-gray-400">© <span id="year"></span> Subhrakanta — Built with ❤️</footer>
   </main>
 
+  <!-- SCRIPTS -->
   <script>
-    // small interactions
+    // Mobile menu toggle
     const btn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuOpen = document.getElementById('menuOpen');
     const menuClose = document.getElementById('menuClose');
     btn && btn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
-      menuOpen.classList.toggle('hidden');
-      menuClose.classList.toggle('hidden');
+      menuOpen && menuOpen.classList.toggle('hidden');
+      menuClose && menuClose.classList.toggle('hidden');
     });
 
-    // set year
+    // set current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // basic form behaviour (no backend) — show a toast
-    const form = document.querySelector('form');
-    form && form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thanks! This is a demo form — replace with your backend or mailto link.');
-      form.reset();
-    });
+    // Web3Forms submission handler (shows success / error)
+    (function () {
+      const form = document.getElementById('contactForm');
+      const result = document.getElementById('result');
+      const error = document.getElementById('error');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        result.classList.add('hidden');
+        error.classList.add('hidden');
+
+        const formData = new FormData(form);
+
+        try {
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+          });
+
+          // web3forms returns 200 for success
+          if (!resp.ok) throw new Error('Network response not OK');
+
+          result.classList.remove('hidden');
+          form.reset();
+          setTimeout(() => result.classList.add('hidden'), 4000);
+        } catch (err) {
+          console.error('Form submit error:', err);
+          error.classList.remove('hidden');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
